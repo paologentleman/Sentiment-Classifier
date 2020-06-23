@@ -59,6 +59,7 @@ home_layout = html.Div(
                 )
             ],
             style={
+                'display': 'None'
                 'height': '100px',
                 'backgroundColor': 'white',
                 'borderStyle': 'solid',
@@ -87,14 +88,14 @@ home_layout = html.Div(
                     className="form-control z-depth-1",
                     id="review",
                     rows="8",
-                    placeholder="Write something here..."
+                    placeholder="Introduce your review here:"
                 )
             ],
             className="form-group shadow-textarea"
         ),
 
         html.H5(
-            'Sentiment analysis 🤖'
+            'Sentiment Prediction'
         ),
 
         dbc.Progress(
@@ -114,7 +115,7 @@ home_layout = html.Div(
         ),
 
         html.H5(
-            'Propose a rating 😁📢'
+            'Insert your rating '
         ),
 
         html.Div(
@@ -137,9 +138,6 @@ home_layout = html.Div(
                     style={
                         "marginRight": "10px"
                     }
-                ),
-                html.I(
-                    className="fa fa-paper-plane m-l-7"
                 )
             ],
             className="btn btn-lg btn-primary btn-block",
@@ -150,13 +148,10 @@ home_layout = html.Div(
         html.Button(
             [
                 html.Span(
-                    "Review another brand",
+                    "Choose Another Trademark",
                     style={
                         "marginRight": "10px"
                     }
-                ),
-                html.I(
-                    className="fas fa-sync-alt"
                 )
             ],
             className="btn btn-lg btn-secondary btn-block",
@@ -170,11 +165,16 @@ home_layout = html.Div(
         ),
         html.P(
             [
-                html.A("BESBES", href="https://ahmedbesbes.com", target="_blank"),
-                " / ",
-                html.A("DEBBICHE", href="https://marwandebbiche.com",
-                       target="_blank"),
-                " - 2019"
+                html.A("DAVIDE M.", target="_blank"),
+                " - ",
+                html.A("DAVIDE T.", target="_blank"),
+                " - "
+                html.A("JOSÉ M.", target="_blank"),
+                " - ",
+                html.A("GIULIA M.", target="_blank"),
+                " - ",
+                html.A("PAOLO G.", target="_blank"),
+                " - 2020"
             ],
             className="mt-3 mb-2 text-muted"
         ),
@@ -184,10 +184,10 @@ home_layout = html.Div(
 
 admin_layout = html.Div(
     [
-        html.H1("Admin Page 🔑"),
+        html.H1("Administrator"),
         html.Div(id="admin-page-content"),
         html.P(
-            dcc.Link("Go to Home 🏡", href="/"),
+            dcc.Link("Back to Home", href="/"),
             style={"marginTop": "20px"}
         )
     ]
