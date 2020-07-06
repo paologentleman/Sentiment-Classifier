@@ -1,4 +1,4 @@
-# Sentiment Classifier Webapp
+# Sentiment Classifier
 
 This repository represents the core application used for a Cloud Computing's course project.
 
